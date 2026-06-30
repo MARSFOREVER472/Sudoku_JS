@@ -2,7 +2,7 @@
 
 ## **_Create a Sudoku Puzzle using HTML CSS &amp; JavaScript!_**
 
-Prerequisites
+### Prerequisites
 HTML
 CSS
 JavaScript
