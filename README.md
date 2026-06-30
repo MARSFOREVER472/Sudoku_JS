@@ -2,8 +2,8 @@
 
 ## **_Create a Sudoku Puzzle using HTML CSS &amp; JavaScript!_**
 
-### Prerequisites:
+### **_Prerequisites:_**
 
-- HTML.
-- CSS.
-- JavaScript.
+- **_HTML._**
+- **_CSS._**
+- **_JavaScript._**
