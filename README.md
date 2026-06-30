@@ -1,3 +1,3 @@
-# Sudoku_JS
+# **_Sudoku_JS_**
 
 ## Create a Sudoku Puzzle using HTML CSS &amp; JavaScript!
