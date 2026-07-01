@@ -29,3 +29,21 @@ body
     line-height: 30px;
     box-sizing: border-box;
 }
+
+.lightBackground
+{
+    background-image: linear-gradient(darkorange, orange);
+}
+
+.darkBackground
+{
+    background-image: linear-gradient(black, darkblue);
+}
+
+.buttonContainer
+{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
