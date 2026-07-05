@@ -24,4 +24,13 @@ document.addEventListener("DOMContentLoaded", function()
 
         return puzzle;
     }
+
+    // FUNCIÓN PARA RESOLVER EL TABLERO DE SUDOKU...
+
+    function solveSudoku(board)
+    {
+        const solvedPuzzle = JSON.parse(JSON.stringify(board));
+        solveHelper(solvedPuzzle);
+        return solvedPuzzle;
+    }
 })
