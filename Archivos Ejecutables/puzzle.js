@@ -33,4 +33,35 @@ document.addEventListener("DOMContentLoaded", function()
         solveHelper(solvedPuzzle);
         return solvedPuzzle;
     }
+
+    // FUNCIÓN QUE RESUELVE EL PUZZLE DE MANERA RECURSIVA...
+
+    function solveHelper(board)
+    {
+        const emptyCell = findEmptyCell(board);
+
+        if (!emptyCell)
+        {
+            return true; // PUZZLE RESUELTO.
+        }
+
+        const [row, col] = emptyCell;
+
+        for (let num = 1; num <= 9; num++)
+        {
+            if (isValidMove(board, row, col, num))
+            {
+                board[row][col] = num;
+
+                if (solveHelper(board))
+                {
+                    return true;
+                }
+
+                board[row][col] = 0; // BACKTRACKING...
+            }
+        }
+
+        return false; // SI NO ENCUENTRA UN VALOR DE CADA CELDA DEL TABLERO...
+    }
 })
