@@ -64,4 +64,21 @@ document.addEventListener("DOMContentLoaded", function()
 
         return false; // SI NO ENCUENTRA UN VALOR DE CADA CELDA DEL TABLERO...
     }
+
+    // FUNCIÓN PARA ENCONTRAR UNA CELDA VACÍA DENTRO DEL TABLERO...
+
+    function findEmptyCell(board)
+    {
+        for (let row = 0; row < 9; row++)
+        {
+            for (let col = 0; col < 9; col++)
+            {
+                if (board[row][col] === 0)
+                {
+                    return [row, col];
+                }
+            }
+        }
+        return null; // NO SE ENCUENTRA UNA CELDA VACÍA...
+    }
 })
