@@ -81,4 +81,47 @@ document.addEventListener("DOMContentLoaded", function()
         }
         return null; // NO SE ENCUENTRA UNA CELDA VACÍA...
     }
+
+    // FUNCIÓN PARA VERIFICAR SI EL MOVIMIENTO ES VÁLIDO...
+
+    function isValidMove(board, row, col, num)
+    {
+        // VERIFICA POR FILA...
+
+        for (let i = 0; i < 9; i++)
+        {
+            if (board[row][i] === num)
+            {
+                return false;
+            }
+        }
+
+        // VERIFICA POR COLUMNA...
+
+        for (let i = 0; i < 9; i++)
+        {
+            if (board[i][col] === num)
+            {
+                return false;
+            }
+        }
+
+        // VERIFICA EN CELDAS DE 3 * 3...
+
+        const startRow = Math.floor(row / 3) * 3;
+        const startCol = Math.floor(col / 3) * 3;
+
+        for (let i = startRow; i < startRow + 3; i++)
+        {
+            for (let j = startCol; j < startCol + 3; j++)
+            {
+                if (board[i][j] === num)
+                {
+                    return false;
+                }
+            }
+        }
+
+        return true; // MOVIMIENTO VÁLIDO...
+    }
 })
