@@ -124,4 +124,28 @@ document.addEventListener("DOMContentLoaded", function()
 
         return true; // MOVIMIENTO VÁLIDO...
     }
+
+    // FUNCIÓN PARA CREAR UN PUZZLE DE SUDOKU MEDIANTE CELDAS...
+
+    function createSudokuGrid(puzzle)
+    {
+        container.innerHTML = '';
+
+        puzzle.forEach((row, rowIndex) => {
+            const rowElement = document.createElement('div');
+            rowElement.classList.add('row');
+            row.forEach((cell, columnIndex) => {
+                const cellElement = document.createElement('input');
+                cellElement.classList.add('cell');
+                cellElement.classList
+                    .add((rowIndex + columnIndex) % 2 === 0 ?
+                        'lightBackground' : 'darkBackground');
+                cellElement.type = 'text';
+                cellElement.maxLength = 1;
+                cellElement.value = cell !== 0 ? cell : '';
+                rowElement.appendChild(cellElement);
+            });
+            container.appendChild(rowElement);
+        });
+    }
 })
