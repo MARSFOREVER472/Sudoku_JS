@@ -2,20 +2,20 @@
 
 body 
 {
-    font-family: Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-image: url('img/Captura\ de\ pantalla\ 2026-07-02\ 235058.png');
     background-size: cover;
 }
 
 h1
 {
-    background: linear-gradient(darkred, red);
+    font-size: 40px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(darkred, orange);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-size: 40px;
-    text-align: center;
-    font-family: sans-serif;
     margin-top: 10px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
