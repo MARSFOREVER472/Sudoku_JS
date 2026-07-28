@@ -9,11 +9,15 @@ body
 
 h1
 {
-    color: #2c3e50;
+    background: linear-gradient(darkred, red);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     font-size: 40px;
     text-align: center;
     font-family: sans-serif;
     margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .container
