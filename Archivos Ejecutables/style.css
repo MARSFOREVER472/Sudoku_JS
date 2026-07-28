@@ -4,15 +4,16 @@ body
 {
     font-family: Arial, sans-serif;
     background-image: url('img/Captura\ de\ pantalla\ 2026-07-02\ 235058.png');
+    background-size: cover;
 }
 
 h1
 {
     color: #2c3e50;
-    font-size: 36px;
+    font-size: 40px;
     text-align: center;
     font-family: sans-serif;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .container
@@ -20,7 +21,7 @@ h1
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 15px;
 }
 
 .row
@@ -30,8 +31,8 @@ h1
 
 .cell
 {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     border: 1px solid black;
     text-align: center;
     line-height: 30px;
@@ -50,7 +51,7 @@ h1
 
 .buttonContainer
 {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
