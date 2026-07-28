@@ -148,4 +148,10 @@ document.addEventListener("DOMContentLoaded", function()
             container.appendChild(rowElement);
         });
     }
+
+    // INICIALIZA EL PUZZLE...
+
+    let initialPuzzle = generateRandomSudoku();
+    let puzzle = JSON.parse(JSON.stringify(initialPuzzle));
+    let solvedPuzzle = [];
 })
