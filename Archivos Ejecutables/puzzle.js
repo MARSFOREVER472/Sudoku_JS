@@ -154,4 +154,34 @@ document.addEventListener("DOMContentLoaded", function()
     let initialPuzzle = generateRandomSudoku();
     let puzzle = JSON.parse(JSON.stringify(initialPuzzle));
     let solvedPuzzle = [];
-})
+
+    // FUNCIÓN PARA RESOLVER EL PUZZLE...
+
+    function solvePuzzle()
+    {
+        solvedPuzzle = solveSudoku(puzzle);
+        createSudokuGrid(solvedPuzzle);
+    }
+
+    // FUNCIÓN PARA REINICIAR EL PUZZLE...
+
+    function resetPuzzle()
+    {
+        initialPuzzle = generateRandomSudoku();
+        puzzle = JSON.parse(JSON.stringify(initialPuzzle));
+        solvedPuzzle = [];
+        createSudokuGrid(puzzle);
+    }
+
+    // SE CREA UN PUZZLE INICIAL...
+
+    createSudokuGrid(puzzle);
+
+    // SE INSTAURA MEDIANTE EVENTOS AL INTERACTUAR CON LOS BOTONES...
+
+    document.getElementById("solveButton")
+        .addEventListener("click", solvePuzzle);
+
+    document.getElementById("resetButton")
+        .addEventListener("click", resetPuzzle);
+});
